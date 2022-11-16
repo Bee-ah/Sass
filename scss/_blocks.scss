@@ -1,4 +1,4 @@
-.blocks {
+%blocks {
 
     padding: 5rem 0;
     margin-bottom: 4rem;
@@ -18,7 +18,7 @@
     }
 
     li {
-        color: #772727;
+        color: $color-02;
         display: block;
         margin: $space-default auto;
         width: 30%;
@@ -39,7 +39,7 @@
         }
 
         a {
-            background-color: #772727;
+            background-color: $color-01;
             border-radius: 5px;
             color: white;
             display: block;
