@@ -15,6 +15,13 @@
         height: 250px;
         padding: 1rem 0;
         width: 100%;
+        @media(max-width: $tablet){
+           
+            flex-direction: column;
+            height:auto;
+
+        }
+
     }
 
     li {
@@ -28,13 +35,22 @@
             height: 200px;
             overflow: hidden;
             width: 100%;
+
+            @media(max-width:$tablet){
+                height:calc(90vh/5);
+            }
+
             img{
-                width: 380px;
+               @media(min-width:$ipad){
                 -webkit-transition: 2s ease-in-out;
                 transition: 2s ease-in-out;
-            }
-            img:hover{
-                width:400px;
+                &:hover{
+                    width:400px;
+                }
+               }   
+                 width:100%;
+                 transition-property: none;
+        
             }
         }
 
@@ -49,6 +65,9 @@
             text-align: center;
             text-decoration: none;
         }
+    }
+    @media(max-width: $tablet){
+        margin-bottom: 0rem;
     }
 
 }

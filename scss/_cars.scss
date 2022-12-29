@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'blocks';
 
 @mixin theme($theme: rgba(248, 102, 35, 0.74),$bg: $color-02){
@@ -23,9 +24,14 @@
         justify-content: center;
         align-items: baseline;
         flex-flow: column;
+        @media(max-width: $tablet){
+            width: math.div(600,1000)*100%;
+        }
 
         a {
             background-color: rgb(182, 41, 41);
         }
+        
     }
+
 }//identação que não funciona se for escrito dessa maneira no css

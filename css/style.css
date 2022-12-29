@@ -31,6 +31,11 @@ section {
   max-width: 1200px;
 }
 
+@media (max-width: 1080px) {
+  .container {
+    max-width: 300;
+  }
+}
 img {
   width: 100%;
   height: auto;
@@ -91,6 +96,12 @@ footer {
   padding: 1rem 0;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .cars ul {
+    flex-direction: column;
+    height: auto;
+  }
+}
 .cars li {
   color: #999;
   display: block;
@@ -103,13 +114,23 @@ footer {
   overflow: hidden;
   width: 100%;
 }
-.cars li .img-container img {
-  width: 380px;
-  -webkit-transition: 2s ease-in-out;
-  transition: 2s ease-in-out;
+@media (max-width: 768px) {
+  .cars li .img-container {
+    height: 18vh;
+  }
 }
-.cars li .img-container img:hover {
-  width: 400px;
+.cars li .img-container img {
+  width: 100%;
+  transition-property: none;
+}
+@media (min-width: 1080px) {
+  .cars li .img-container img {
+    -webkit-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
+  }
+  .cars li .img-container img:hover {
+    width: 400px;
+  }
 }
 .cars li a {
   background-color: rgb(221, 75, 7);
@@ -121,6 +142,11 @@ footer {
   padding: 4px 8px;
   text-align: center;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .cars {
+    margin-bottom: 0rem;
+  }
 }
 
 .cars h2 {
@@ -139,6 +165,11 @@ footer {
   justify-content: center;
   align-items: baseline;
   flex-flow: column;
+}
+@media (max-width: 768px) {
+  .cars li {
+    width: 60%;
+  }
 }
 .cars li a {
   background-color: rgb(182, 41, 41);
