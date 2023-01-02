@@ -1,18 +1,21 @@
-%blocks {
+.blocks {
 
     padding: 5rem 0;
     margin-bottom: 4rem;
 
-    h2 {
-        color: $color-01;
-    }
 
-    ul {
+    &__description{
+        text-align: center;
+        padding:2rem;
+        color: $color-04;
+    }
+    
+    &__list-container {
         list-style-type: none;
         font-size: $font-small; // chama a
         display: flex;
         justify-content: space-between;
-        height: 250px;
+        height: 150vh;
         padding: 1rem 0;
         width: 100%;
         @media(max-width: $tablet){
@@ -24,37 +27,38 @@
 
     }
 
-    li {
+    &__list {
         color: $color-02;
         display: block;
         margin: $space-default auto;
         width: 30%;
-        
-        .img-container {
-            display: block;
-            height: 200px;
-            overflow: hidden;
-            width: 100%;
+      
+    } 
+    &__img-container {
+        display: block;
+        height: 200px;
+        overflow: hidden;
+        width: 100%;
 
-            @media(max-width:$tablet){
-                height:calc(90vh/5);
-            }
-
-            img{
-               @media(min-width:$ipad){
-                -webkit-transition: 2s ease-in-out;
-                transition: 2s ease-in-out;
-                &:hover{
-                    width:400px;
-                }
-               }   
-                 width:100%;
-                 transition-property: none;
-        
-            }
+        @media(max-width:$tablet){
+            height:calc(90vh/5);
         }
 
-        a {
+        img{
+           @media(min-width:$ipad){
+            -webkit-transition: 2s ease-in-out;
+            transition: 2s ease-in-out;
+            &:hover{
+                width:400px;
+            }
+           }   
+             width:100%;
+             transition-property: none;
+    
+        }
+    }
+
+     &__link {
             background-color: $color-01;
             border-radius: 5px;
             color: white;
@@ -65,7 +69,6 @@
             text-align: center;
             text-decoration: none;
         }
-    }
     @media(max-width: $tablet){
         margin-bottom: 0rem;
     }

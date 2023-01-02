@@ -1,37 +1,42 @@
 @use 'sass:math';
-@import 'blocks';
 
-@mixin theme($theme: rgba(248, 102, 35, 0.74),$bg: $color-02){
+
+@mixin theme($theme: rgba(248, 102, 35, 0.74),$bg: $color-02, $descrip : $color-01){
     border: 1px dotted $theme;
     background-color: $bg;
+    p{
+     color:$descrip;   
+    }
 
 }
 
 
 .cars {
-    @extend %blocks;
-    h2 {
+  
+    &__title {
         color: $color-02;
     }
-    .destaque{
-        @include theme;
-    }
-    li {
-        @include theme($theme: $color-default,$bg: $bg-color);
+   
+    &__list {
+        @include theme($theme: $color-default,$bg: $bg-color,$descrip:$color-04);
         color: $color-04;
         display: flex;
         height:max-content;
         justify-content: center;
         align-items: baseline;
         flex-flow: column;
+         &--destaque{
+        @include theme;
+        }
         @media(max-width: $tablet){
             width: math.div(600,1000)*100%;
         }
 
-        a {
+        &__link {
             background-color: rgb(182, 41, 41);
         }
         
     }
+
 
 }//identação que não funciona se for escrito dessa maneira no css

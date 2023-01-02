@@ -80,59 +80,61 @@ footer {
   padding: 2rem;
 }
 
-.cars {
+.blocks {
   padding: 5rem 0;
   margin-bottom: 4rem;
 }
-.cars h2 {
-  color: rgb(221, 75, 7);
+.blocks__description {
+  text-align: center;
+  padding: 2rem;
+  color: #222;
 }
-.cars ul {
+.blocks__list-container {
   list-style-type: none;
   font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
-  height: 250px;
+  height: 150vh;
   padding: 1rem 0;
   width: 100%;
 }
 @media (max-width: 768px) {
-  .cars ul {
+  .blocks__list-container {
     flex-direction: column;
     height: auto;
   }
 }
-.cars li {
+.blocks__list {
   color: #999;
   display: block;
   margin: 1.5rem auto;
   width: 30%;
 }
-.cars li .img-container {
+.blocks__img-container {
   display: block;
   height: 200px;
   overflow: hidden;
   width: 100%;
 }
 @media (max-width: 768px) {
-  .cars li .img-container {
+  .blocks__img-container {
     height: 18vh;
   }
 }
-.cars li .img-container img {
+.blocks__img-container img {
   width: 100%;
   transition-property: none;
 }
 @media (min-width: 1080px) {
-  .cars li .img-container img {
+  .blocks__img-container img {
     -webkit-transition: 2s ease-in-out;
     transition: 2s ease-in-out;
   }
-  .cars li .img-container img:hover {
+  .blocks__img-container img:hover {
     width: 400px;
   }
 }
-.cars li a {
+.blocks__link {
   background-color: rgb(221, 75, 7);
   border-radius: 5px;
   color: white;
@@ -144,19 +146,15 @@ footer {
   text-decoration: none;
 }
 @media (max-width: 768px) {
-  .cars {
+  .blocks {
     margin-bottom: 0rem;
   }
 }
 
-.cars h2 {
+.cars__title {
   color: #999;
 }
-.cars .destaque {
-  border: 1px dotted rgba(248, 102, 35, 0.74);
-  background-color: #999;
-}
-.cars li {
+.cars__list {
   border: 1px dotted #444;
   background-color: #ddd;
   color: #222;
@@ -166,12 +164,22 @@ footer {
   align-items: baseline;
   flex-flow: column;
 }
+.cars__list p {
+  color: #222;
+}
+.cars__list--destaque {
+  border: 1px dotted rgba(248, 102, 35, 0.74);
+  background-color: #999;
+}
+.cars__list--destaque p {
+  color: rgb(221, 75, 7);
+}
 @media (max-width: 768px) {
-  .cars li {
+  .cars__list {
     width: 60%;
   }
 }
-.cars li a {
+.cars__list__link {
   background-color: rgb(182, 41, 41);
 }
 
@@ -179,24 +187,24 @@ footer {
   background-color: #222;
   padding: 1.5rem;
 }
-.destack h1 {
+.destack__title {
   color: #f00;
   float: left;
   font-size: 3rem;
   margin-top: 0;
 }
-.destack h2 {
+.destack__subtitle {
   float: left;
   font-size: 1.2rem;
   margin-left: 1.5rem;
   margin-top: 1.5rem;
 }
-.destack img {
+.destack__image {
   width: 100%;
   height: auto;
   margin: 1.5rem auto;
 }
-.destack p {
+.destack__description {
   font-size: 1.5rem;
   color: rgb(221, 75, 7);
   padding: 2rem 0;
